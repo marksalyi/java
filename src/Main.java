@@ -6,7 +6,40 @@ public class Main {
 
     private static ArrayList<Album> albums = new ArrayList<Album>();
     public static void main(String[] args) {
-        Album album = new Album("Stormbringer", "Deep Purple");
+
+
+
+        Playlist playlist = new Playlist("BetonHofi");
+        Song song = new Song("tiszalok", 3.45);
+        playlist.addSong(song);
+        playlist.addSong(new Song("acdc", 4.01));
+        playlist.addSong(new Song("manuel", 2.45));
+        playlist.addSong(new Song("diablo", 3.23));
+
+        // playlist osztályban hozzunk létre egy olyan methodust hogy remove amely kitörli az első elemet
+        // play methodust hozzuk létre menjen végig a számokon és írja ki a számokat (print)
+
+        playlist.printList();
+
+        System.out.println(playlist.getSongs());
+
+        playlist.removeSong();
+
+
+        playlist.printList();
+        playlist.playNext();
+        playlist.playNext();
+        playlist.playNext();
+        playlist.playNext();
+        playlist.playPrevoius();
+        playlist.playPrevoius();
+        playlist.playPrevoius();
+        playlist.playPrevoius();
+        playlist.playPrevoius();
+
+
+
+      /*  Album album = new Album("Stormbringer", "Deep Purple");
         album.addSong("Stormbringer", 4.6);
         album.addSong("Love dont mean a thing", 4.22);
         album.addSong("Holy man", 4.3);
@@ -40,13 +73,18 @@ public class Main {
         albums.get(1).addToPlayList(24, playList); // there is no track 24
 
 
-        play(playList);
+        play(playList);*/
 
 
 
     }
 
-    private static void play(LinkedList<Song> playList){
+
+
+
+
+
+    /*private static void play(LinkedList<Song> playList){
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         boolean forward = true;
@@ -151,7 +189,7 @@ public class Main {
             System.out.println(iterator.next());
         }
         System.out.println("=========================");
-    }
+    }*/
 
 
 }
